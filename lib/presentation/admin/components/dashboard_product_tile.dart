@@ -41,9 +41,9 @@ class DashboardProductTile extends StatelessWidget {
                       color: kBlackColor,
                     ),
                   ),
-                  Text(
-                    'Total Penjualan : ${myFruit['totalSold']} Kg',
-                    style: const TextStyle(
+                  const Text(
+                    'Buah',
+                    style: TextStyle(
                       color: kGreyColor,
                     ),
                   )
@@ -51,9 +51,33 @@ class DashboardProductTile extends StatelessWidget {
               ),
             ],
           ),
-          const Icon(
-            Icons.chevron_right,
-            color: kDarkGreyColor,
+          Column(
+            children: [
+              const Text(
+                '10 Kg',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(height: 6),
+              RichText(
+                text: const TextSpan(
+                  text: '\$',
+                  style: TextStyle(color: kGreyColor),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: '20',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: kBlackColor,
+                      ),
+                    ),
+                    TextSpan(text: '/Kg'),
+                  ],
+                ),
+              )
+            ],
           )
         ],
       ),

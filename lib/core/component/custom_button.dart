@@ -9,6 +9,7 @@ class CustomButton extends StatelessWidget {
     this.bgColor = kPrimaryColor,
     this.borderColor,
     this.fgColor = Colors.white,
+    this.width = 240,
   });
 
   final String title;
@@ -16,11 +17,12 @@ class CustomButton extends StatelessWidget {
   final Color? borderColor;
   final Color fgColor;
   final Function() onPressed;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 240,
+      width: width,
       height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(

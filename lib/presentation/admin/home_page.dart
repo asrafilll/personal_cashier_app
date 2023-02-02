@@ -4,9 +4,9 @@ import 'package:personal_cashier_app/presentation/admin/components/dashboard_pro
 import 'package:personal_cashier_app/presentation/admin/components/dashboard_summary.dart';
 
 class AdminHomePage extends StatelessWidget {
-  AdminHomePage({super.key});
+  const AdminHomePage({super.key});
 
-  final List<Map<String, dynamic>> myFruit = [
+  static List<Map<String, dynamic>> myFruit = [
     {
       'image': 'assets/products/apple.png',
       'name': 'Apel',

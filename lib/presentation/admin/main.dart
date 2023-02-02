@@ -22,7 +22,7 @@ class _AdminMainPageState extends State<AdminMainPage> {
   }
 
   final List<Widget> _adminPage = [
-    AdminHomePage(),
+    const AdminHomePage(),
     const AdminProductPage(),
     const AdminReportPage(),
     const AdminSettingPage(),
@@ -38,7 +38,8 @@ class _AdminMainPageState extends State<AdminMainPage> {
         unselectedFontSize: 14,
         onTap: _onTap,
         currentIndex: _selectedindex,
-        showUnselectedLabels: true,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         unselectedItemColor: kGreyColor,
         selectedItemColor: kPrimaryColor,
         items: const [
