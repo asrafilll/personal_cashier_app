@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:personal_cashier_app/core/app_styles.dart';
 import 'package:personal_cashier_app/core/component/custom_button.dart';
 import 'package:personal_cashier_app/presentation/admin/main.dart';
+import 'package:personal_cashier_app/presentation/cashier/home_screen.dart';
+import 'package:personal_cashier_app/presentation/cashier/main.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -42,7 +44,14 @@ class LoginScreen extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             CustomButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (builder) => const CashierMainPage(),
+                  ),
+                );
+              },
               title: 'Login as Cashier',
             ),
             const SizedBox(height: 10),
